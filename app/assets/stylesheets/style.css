@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+.wrapper {
+  max-width: 1140px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  position: relative;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.sr-only {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: #fff;
+  background-color: #FF9959;
+  min-width: 120px;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.button svg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+
+.button span {
+  display: none;
+}
+
+.footer {
+  width: 100%;
+  background-color: #999;
+  padding: 10px 0;
+
+  position: absolute;
+    bottom: 0; 
+}
+.copyright {
+  text-align: center;
+  color: #fff;
+  font-size: 10px;
+}
+
+@media (min-width: 600px) {
+  .button span {
+    display: initial;
+  }
+}
+
+.button--icon {
+  min-width: initial;
+  padding: 0.5rem;
+}
+
+/* フォーム周り */
+.form__wrapper{
+  text-align: center
+}
+
+.form__text {
+  width: 50%;
+}
+
+.field{
+  margin: 20px 0;
+}
+
+.actions{
+  margin-bottom: 40px;
+}
+
+.form__btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #fff;
+  text-decoration: none;
+  user-select: none;
+  background: #FF9959;
+  border: 1px #FF9959 solid;
+  border-radius: 3px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  transition: 0.2s ease;
+}
+
+.form__btn:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+
+/* メイン */
+
+.greeting{
+  margin-bottom: 20px;
+}
+.greeting__link{
+  text-decoration: underline;
+}
+.page-heading {
+  font-size: 30px;
+  margin-top: 90px;
+  margin-bottom: 28px;
+}
+
+.card__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: calc(100vh - 161px);
+}
+.card {
+  width: calc((100% - 50px) / 3);
+  margin-bottom: 40px;
+}
+.card__img {
+  margin-bottom: 16px;
+}
+.card__title {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.card__summary {
+  font-size: 16px;
+}
+.card__user {
+  display: block;
+  font-size: 12px;
+  color: #999;
+  text-align: right;
+  text-decoration: underline;
+}
+
+/* 詳細ページ */
+.prototype__wrapper{
+  min-height: calc(100vh - 161px);
+}
+.prototype__hedding{
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.prototype__user{
+  display: block;
+  font-size: 16px;
+  color: #999;
+  text-align: center;
+  text-decoration: underline;
+}
+.prototype__image{
+  width: 40%;
+  margin: 0 auto;
+  padding: 16px 0;
+}
+.prototype__detail{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+.detail__title{
+  font-size: 20px;
+  font-weight: bold;
+}
+.prototype__manage{
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+}
+.prototype__btn{
+  display: block;
+  padding: 0.4em 1.6em;
+  font-size: 0.4em;
+  color: #999;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #999 solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  margin: 0 4px;
+}
+.prototype__btn:hover{
+  color: #fff;
+  background: #999;
+}
+
+.prototype__comments{
+  background-color: #f6f6f6;
+  padding: 20px;
+  margin: 28px 0 40px 0;
+}
+
+.comments_lists{
+  padding-left: 20px;
+}
+
+.comments_list{
+  list-style-type: square;
+  padding-bottom: 5px;
+}
+
+.comment_user{
+  font-size: 16px;
+  color: #999;
+  text-decoration: underline;
+}
+
+/* ユーザーページ */
+.user__wrapper{
+  min-height: calc(100vh - 161px);
+}
+.table{
+  border-collapse: collapse;
+  margin-bottom: 32px;
+  width: 50%;
+}
+.table__col1{
+  text-align: left;
+  font-weight: bold;
+  background: #fafafa;
+  border-collapse: collapse;
+  border: 1px solid #f5f5f5;
+  width: 30%;
+  padding: 8px;
+}
+.table__col2{
+  text-align: left;
+  border: 1px solid #f5f5f5;
+  border-collapse: collapse;
+  width: 70%;
+  padding: 16px 8px;
+}
+.user__card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
