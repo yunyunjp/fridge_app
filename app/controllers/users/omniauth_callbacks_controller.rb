@@ -27,9 +27,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # def after_omniauth_failure_path_for(scope)
   #   super(scope)
   # end
-  def twitter
-    authorization
-  end
   
   def google_oauth2
     authorization
