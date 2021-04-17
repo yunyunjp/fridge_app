@@ -6,6 +6,7 @@ class User < ApplicationRecord
   validates :nickname, presence: true
 
   has_many :sns_credentials
+  has_many :items
 
   def self.from_omniauth(auth)
     sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create

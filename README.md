@@ -11,6 +11,7 @@
 ### Association
 
 - has_many :items
+- has_many :sns_credentials
 
 ## items テーブル
 
@@ -22,6 +23,18 @@
 | expiration_date | date       | null: false                    |
 | memo            | text       |                                |
 | user            | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+
+## sns_credentials テーブル
+
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+| provider | string     |                                |
+| uid      | string     |                                |
+| user     | references | null: false, foreign_key: true |
 
 ### Association
 

@@ -19,8 +19,8 @@
             <% unless user_signed_in? %>
             <li class="nav__item"><a href="/users/sign_up">新規登録</a></li>
             <% else %>
-            <li class="nav__item"><a href="#">冷蔵庫一覧</a></li>
-            <li class="nav__item"><a href="#">アイテム新規登録</a></li>
+            <li class="nav__item"><a href="/">ホーム</a></li>
+            <li class="nav__item"><a href="/items/new">保存</a></li>
             <li class="nav__item"><a href="#">賞味期限一覧</a></li>
             <li class="nav__item"><a href="/users/sign_out" data-method="delete">ログアウト</a></li>
             <% end %>
@@ -80,6 +80,6 @@
       
   </body>
   <footer class="footer">
-    <p class="copyright">Copyright © FRIDGE All rights reserved.</p>
+    <p class="copyright">Copyrigt © 2021 FRIDGE_APP All rights reserved.</p>
   </footer>
 </html>
