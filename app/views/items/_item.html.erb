@@ -1,11 +1,19 @@
-<div class="card">
-  <%= link_to image_tag(item.image.variant(resize: '150x150'), class: :card__img ) , root_path %>
-  <div class="card__body">
-    <%= link_to item.name, root_path, class: :card__title%>
-    <p class="card__summary">
-      <%= item.purchase_date %>
-      <%= item.expiration_date %>
-    </p>
-    <%= link_to "by #{item.user.nickname}", root_path, class: :card__user %>
+<div class="content">
+  <div class="image-content">
+    <%= link_to image_tag(item.image.variant(resize: '200x200'), class: :card__img ), item_path(item) %>
+  </div>  
+  <div class="sub-content">
+    <span>購入日</span>
+    <div id="purchase-date"><%= item.purchase_date %></div>
+  </div>
+  <div class="sub-content">
+    <span>賞味期限</span>
+    <div id="expiration-date"><%= item.expiration_date %></div>
+  </div>
+  <div class="daysleft-content">
+      <span>残り<span id='days-left'></span>日</span>
+  </div>
+  <div class="nickname-content">
+  <%= link_to "by #{item.user.nickname}", root_path, class: :card__user %>
   </div>
 </div>
