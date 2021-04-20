@@ -1,6 +1,15 @@
 ---
 ja:
   activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+      item:
+        name: 名前
+        quantity: 数量
+        purchase_date: 購入日
+        expiration_date: 賞味期限
+        image: 画像
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'

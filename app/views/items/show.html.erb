@@ -9,14 +9,14 @@
           <%= link_to "編集", edit_item_path(@item), class: :prototype__btn %>
           <%= link_to "削除", item_path(@item), method: :delete, class: :prototype__btn %>
         </div>
-      <% end %>  
+      <% end %>
       
       <div class="prototype__image">
         <%= link_to image_tag(@item.image.variant(resize: '200x200'), class: :card__img ) %>
       </div>
 
       <div class="prototype__detail">
-          <p class="daysleft__title">残り<span id='days-left'></span>日</p>
+          <p class="daysleft__title">残り<span id='days_left'></span>日</p>
       </div>
       
       <div class="prototype__body">
@@ -34,13 +34,13 @@
         </div>
         <div class="prototype__detail">
           <p class="detail__title">購入日</p>
-          <p id="purchase-date">
+          <p id="purchase_date">
             <%= @item.purchase_date %>
           </p>
         </div>
         <div class="prototype__detail">
           <p class="detail__title">賞味期限</p>
-          <p id="expiration-date">
+          <p id="expiration_date">
             <%= @item.expiration_date %>
           </p>
         </div>
