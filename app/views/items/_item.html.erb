@@ -1,3 +1,4 @@
+<% @items.each do |item| %>
 <div class="content">
   <div class="image-content">
     <%= link_to image_tag(item.image.variant(resize: '200x200'), class: :card__img ), item_path(item) %>
