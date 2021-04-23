@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "M PLUS 1p";
   margin: 0;
     display: flex;
     flex-flow: column;
@@ -48,8 +48,8 @@ body {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  color: #fff;
-  background-color: #FF9959;
+  color: #f49c75;
+  background-color: #fff;
   min-width: 120px;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -61,7 +61,7 @@ body {
   vertical-align: middle;
   width: 24px;
   height: 24px;
-  fill: #fff;
+  fill: #f49c75;
 }
 
 .button span {
@@ -82,33 +82,33 @@ body {
 
 /* ヘッダー */
 
-.header {
-  background-color: #f1f8fe;
-  margin-bottom: 48px;
-  padding: 20px 0;
-
-}
-
 main {
     background: #ffffff;
+    margin-top: 50px;
     flex: 1;
 }
 
 .inner {
   width: 1024px;
   margin: 0 auto;
-
 }
 
-main {
-    background: #ffffff;
-    margin-top: 50px;
+.nav__toggle {
+ border-style: none;
+ color: #f49c75;
+ background: #fff;
+ min-width: 70px;
+ padding: 0.5rem 1rem;
+ border-radius: 5px;
+ text-align: center;
+ outline: none;
+ 
 }
 
 /* フッター */
 .footer {
   width: 100%;
-  background-color: #999;
+  background-color: #f49c75;
   padding: 10px 0;
   height: 30px;
 
@@ -152,11 +152,12 @@ main {
   color: #fff;
   text-decoration: none;
   user-select: none;
-  background: #FF9959;
-  border: 1px #FF9959 solid;
+  background: #f49c75;
+  border: 1px #f49c75 solid;
   border-radius: 3px;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
   transition: 0.2s ease;
+  outline: none;
 }
 
 .form__btn:hover {
@@ -172,7 +173,7 @@ main {
 .greeting__link{
   text-decoration: underline;
 }
-.page-heading {
+.heading {
   font-size: 28px;
   margin-bottom: 28px;
   margin-top: 28px;
@@ -222,7 +223,7 @@ main {
 .prototype__wrapper{
   min-height: calc(100vh - 161px);
 }
-.prototype__hedding{
+.hedding{
   font-size: 24px;
   font-weight: bold;
   text-align: center;
@@ -329,15 +330,18 @@ main {
 	border: 1px solid #dddddd;
 }
 .cp_table td {
-	text-align: left;
-	vertical-align: top;
+	text-align: center;
+	vertical-align: middle;
 	padding: 10px;
 	border: 1px solid #dddddd;
 }
 .cp_table td:first-child {
+	text-align: center;
+	vertical-align: middle;
+}
+.cp_table td:last-child {
 	text-align: left;
 	vertical-align: middle;
-	font-weight: bold;
 }
 @media only screen and (max-width: 480px) {
 	.cp_table {

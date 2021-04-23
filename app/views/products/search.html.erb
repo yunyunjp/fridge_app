@@ -1,24 +1,45 @@
 <main class="main">
   <div class="inner">
-    <h1>
+    <p class="hedding">
       検索結果
-    </h1>
+    </p>
     <% if @results.length !=0 %>
-     <table class="cp_table">
-      <% @results.each do |result| %>
-        <tbody>
+        <table class="cp_table">
+        <thead>
+        <tr>
+        <th>品目</th>
+        <th>保存期間</th>
+        <th>冷凍</th>
+        <th>メモ</th>
+        </tr>
+        </thead>
+          <tbody>
           <br>
+          <% @results.each do |result| %>
           <tr>
             <td><%= result.name %></td>
-            <td><%= result.shelf_life %></td>
-            <td><%= result.frozen_life %></td>
+            <td><%= result.shelf_life %>日</td>
+            <td><%= result.frozen_life %>日</td>
             <td><%= result.info %></td>
           </tr>
+          <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <table class="cp_table">
+        <thead>
+        <tr>
+        <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <br>
+        <tr>
+          <td>該当する商品はありません</td>
+        </tr>
         </tbody>
+         </table>
       <% end %>
-    <% else %>
-      該当する商品はありません
-    <% end %>
-
+      <br>
   </div>
 </main>

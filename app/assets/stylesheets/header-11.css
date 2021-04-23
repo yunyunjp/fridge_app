@@ -8,7 +8,7 @@
 
 .site-header {
   position: relative;
-  background-color: #FFB080; }
+  background-color: #f49c75; }
 
 .site-header__wrapper {
   display: flex;
@@ -27,7 +27,7 @@
   visibility: hidden;
   opacity: 0;
   transform: translateX(-100%);
-  background-color: #FFB080;
+  background-color: #f49c75;
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
   display: block; }
   .nav__wrapper.active {
