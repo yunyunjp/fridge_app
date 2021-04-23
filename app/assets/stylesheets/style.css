@@ -77,6 +77,7 @@ body {
 .button--icon {
   min-width: initial;
   padding: 0.5rem;
+  font-weight: bold;
 }
 /* 以上がheader-11 */
 
@@ -102,7 +103,7 @@ main {
  border-radius: 5px;
  text-align: center;
  outline: none;
- 
+ font-weight: bold;
 }
 
 /* フッター */
@@ -147,17 +148,17 @@ main {
 
 .form__btn{
   display: inline-block;
-  padding: 0.4em 1.6em;
-  font-size: 0.8em;
+  padding: 0.5em 1.5em;
+  font-size: 1em;
   color: #fff;
   text-decoration: none;
   user-select: none;
   background: #f49c75;
   border: 1px #f49c75 solid;
-  border-radius: 3px;
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
   transition: 0.2s ease;
   outline: none;
+  font-weight: bold;
 }
 
 .form__btn:hover {
