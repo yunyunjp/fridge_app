@@ -1,0 +1,24 @@
+<main class="main">
+  <div class="inner">
+    <h1>
+      検索結果
+    </h1>
+    <% if @results.length !=0 %>
+     <table class="cp_table">
+      <% @results.each do |result| %>
+        <tbody>
+          <br>
+          <tr>
+            <td><%= result.name %></td>
+            <td><%= result.shelf_life %></td>
+            <td><%= result.frozen_life %></td>
+            <td><%= result.info %></td>
+          </tr>
+        </tbody>
+      <% end %>
+    <% else %>
+      該当する商品はありません
+    <% end %>
+
+  </div>
+</main>

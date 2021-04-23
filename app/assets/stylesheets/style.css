@@ -120,6 +120,13 @@ main {
   font-size: 10px;
 }
 
+/* ツイッターボタン */
+.tb {
+  margin-top: 28px;
+  text-align: center;
+}
+
+
 /* フォーム周り */
 .form__wrapper{
   min-height: 100vh;
@@ -184,7 +191,6 @@ main {
     padding-left: 8px;
     padding-right: 8px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-
 }
 
 .card__user {
@@ -307,6 +313,72 @@ main {
   align-items: center;
 }
 
+/* 賞味期限一覧ページ */
+.cp_table *, .cp_table *:before, .cp_table *:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.cp_table {
+	width: 100%;
+	border-collapse: collapse;
+}
+.cp_table th {
+	width: 13%;
+	background: #f4f4f4;
+	padding: 10px;
+	border: 1px solid #dddddd;
+}
+.cp_table td {
+	text-align: left;
+	vertical-align: top;
+	padding: 10px;
+	border: 1px solid #dddddd;
+}
+.cp_table td:first-child {
+	text-align: left;
+	vertical-align: middle;
+	font-weight: bold;
+}
+@media only screen and (max-width: 480px) {
+	.cp_table {
+		display: block;
+		width: 100%;
+	}
+	.cp_table thead {
+		display: block;
+		float: left;
+		overflow-x: scroll;
+	}
+	.cp_table tbody {
+		display: block;
+		width: auto;
+		overflow-x: auto;
+		white-space: nowrap;
+	}
+	.cp_table th {
+		display: block;
+		width: auto;
+		border-width: 1px 0px 0px 1px;
+		border-color: #dddddd;
+		border-style: solid;
+	}
+	.cp_table th:last-child {
+		border-bottom: 1px solid #dddddd;
+	}
+	.cp_table tbody tr {
+		display: inline-block;
+		margin: 0;
+	}
+	.cp_table td {
+		display: block;
+		border-width: 1px 1px 0px 1px;
+		border-color: #dddddd;
+		border-style: solid;
+	}
+	.cp_table td:last-child {
+		border-bottom: 1px solid #dddddd;
+	}
+}
 
 /* タブレット対応 */
 @media (max-width: 1024px) {
@@ -317,7 +389,7 @@ main {
   .page-heading {
     font-size: 24px;
   }
-  .card {
+  .content {
     width: 48%;
     margin-bottom: 40px;
   }
