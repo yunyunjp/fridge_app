@@ -39,9 +39,9 @@
          <table class="cp_table">
             <thead>
             <tr>
-            <th>品目</th>
-            <th>保存期間</th>
-            <th>冷凍</th>
+            <th scope="column"><%= sort_order "name", "品目" %></th>
+            <th scope="column"><%= sort_order "shelf_life", "保存期間" %></th>
+            <th scope="column" ><%= sort_order "frozen_life", "冷凍" %></th>
             <th>メモ</th>
             </tr>
             </thead>

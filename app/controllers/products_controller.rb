@@ -1,8 +1,10 @@
 class ProductsController < ApplicationController
   before_action :search_product, only: [:index, :search]
 
+  helper_method :sort_column, :sort_direction
+
   def index
-    @products = Product.all
+    @products = Product.order("#{sort_column} #{sort_direction}")
     set_product_column
     set_category_column
   end
@@ -25,5 +27,13 @@ class ProductsController < ApplicationController
 
   def set_category_column
     @category_name = Category.select("name").distinct
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : 'asc'
+  end
+   
+  def sort_column
+    Product.column_names.include?(params[:sort]) ? params[:sort] : 'name'
   end
 end
