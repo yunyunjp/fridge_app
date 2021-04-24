@@ -109,7 +109,7 @@ main {
 /* フッター */
 .footer {
   width: 100%;
-  background-color: #f49c75;
+  background-color: #808080;
   padding: 10px 0;
   height: 30px;
 
@@ -148,7 +148,7 @@ main {
 
 .form__btn{
   display: inline-block;
-  padding: 0.5em 1.5em;
+  padding: 0.5em 1.0em;
   font-size: 1em;
   color: #fff;
   text-decoration: none;
@@ -159,11 +159,6 @@ main {
   transition: 0.2s ease;
   outline: none;
   font-weight: bold;
-}
-
-.form__btn:hover {
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
-  cursor: pointer;
 }
 
 /* メイン */
@@ -278,9 +273,9 @@ main {
   transition: 0.4s ease;
   margin: 0 4px;
 }
-.prototype__btn:hover{
+/* .prototype__btn:hover{
   color: #fff;
-  background: #FF9959;
+  background: #FF9959; */
 }
 
 /* ユーザーページ */
@@ -329,12 +324,14 @@ main {
 	background: #f4f4f4;
 	padding: 10px;
 	border: 1px solid #dddddd;
+  
 }
 .cp_table td {
 	text-align: center;
 	vertical-align: middle;
 	padding: 10px;
 	border: 1px solid #dddddd;
+  font-weight: bold;
 }
 .cp_table td:first-child {
 	text-align: center;
@@ -343,6 +340,7 @@ main {
 .cp_table td:last-child {
 	text-align: left;
 	vertical-align: middle;
+  font-weight: normal;
 }
 @media only screen and (max-width: 480px) {
 	.cp_table {
