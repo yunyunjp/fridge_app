@@ -20,6 +20,13 @@ a {
   color: #FFF;
 }
 
+a.sort_header {
+  text-decoration: none;
+  color: #000;
+}
+
+
+
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -127,7 +134,6 @@ main {
   text-align: center;
 }
 
-
 /* フォーム周り */
 .form__wrapper{
   min-height: 100vh;
@@ -202,6 +208,8 @@ main {
 
 .sub-content {
   text-align: center;
+  font-weight: bold;
+  margin-bottom: 7px;
 }
 
 .daysleft-content {
@@ -215,11 +223,28 @@ main {
   text-align: right;
 }
 
+/* プロダクト検索フォーム */
+.cp_point {
+	position: relative;
+	margin: 40px 0 30px;
+	padding: 25px 20px 15px 40px;
+	border: 1px dotted #1b2538;
+	background-color: #f8fdff;
+	border-radius: 5px;
+}
+
+.cp_point li {
+	position: relative;
+	list-style-type: disc;
+}
+
+
+
 /* 詳細ページ */
 .prototype__wrapper{
   min-height: calc(100vh - 161px);
 }
-.hedding{
+.item_heading{
   font-size: 24px;
   font-weight: bold;
   text-align: center;
@@ -230,6 +255,17 @@ main {
   color: #999;
   text-align: center;
   text-decoration: underline;
+}
+
+.item_block {
+  display: flex;
+  justify-content: center;
+}
+
+.item_card {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width:400px;
+  margin-top: 30px;
 }
 .prototype__image{
   width: 40%;
@@ -261,17 +297,15 @@ main {
   justify-content: center;
   padding-top: 16px;
 }
-.prototype__btn{
+.item__btn{
   display: block;
-  padding: 0.4em 1.6em;
-  font-size: 0.4em;
-  color: #999;
-  text-decoration: none;
-  user-select: none;
-  border: 1px #999 solid;
-  border-radius: 3px;
-  transition: 0.4s ease;
-  margin: 0 4px;
+  padding: 0.5em 1.5em;
+  font-size: 0.8em;
+  color: #fff;
+  background: #f49c75;
+  border-radius: 5px;
+  margin: 0 3px;
+  font-weight: bold;
 }
 
 /* ユーザーページ */

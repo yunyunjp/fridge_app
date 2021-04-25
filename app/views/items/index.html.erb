@@ -3,27 +3,25 @@
     <div class="card__wrapper">
     <input id="arr_json" type="hidden" value="<%= @items.length %>" class='arr_json'/>
       <% @items.each_with_index do |item, i| %>
-        <div class="content">
-          <div class="image-content">
-            <%= link_to image_tag(item.image.variant(resize: '200x200'), class: :card__img ), item_path(item) %>
-          </div>  
-          <div class="sub-content">
-            <span>購入日</span>
-            <div id="purchase-date<%=i %>"> <%= item.purchase_date %></div>
-            
-          </div>
-          <div class="sub-content">
-            <span>賞味期限</span>
-            <div id="expiration-date<%=i %>"><%= item.expiration_date %></div>
-          </div>
-          <div class="daysleft-content">
-              <span>残り<span id="days-left<%=i %>"></span>日</span>
-          </div>
-          <div class="nickname-content">
-          <%= link_to "by #{item.user.nickname}", root_path, class: :card__user %>
-          </div>
-        </div>
-      <% end %>
+      <div class="content">
+      <div class="image-content">
+        <%= link_to image_tag(item.image.variant(resize: '200x200'), class: :card__img ), item_path(item) %>
+      </div>  
+      <div class="sub-content">
+        <div id="name<%=i %>"> <%= item.name %></div>
+      </div>
+      <div class="sub-content">
+        <span>賞味期限</span>
+        <div id="expiration-date<%=i %>"><%= item.expiration_date %></div>
+      </div>
+      <div class="daysleft-content">
+          <span>残り<span id="days-left<%=i %>"></span>日</span>
+      </div>
+      <div class="nickname-content">
+          <%= link_to "by #{item.user.nickname}", user_path(item.user), class: :card__user %>
+      </div>
+      </div>
+      <% end %> 
     </div>
   </div>
   <p class="tb"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-lang="ja" data-size="medium" data-hashtags="FRIDGE私の冷蔵庫" data-text="FRIDGE~私の冷蔵庫~" data-show-count="false">Tweet</a>
