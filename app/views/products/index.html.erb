@@ -1,9 +1,11 @@
 <main class="main">
   <div class="inner">
    <%= search_form_for @p, url: products_search_path do |f| %>
-          <br>
-            
           <ul class="cp_point">
+            <li><i class="fas fa-search fa-1x"></i><%= f.label :name, 'キーワード：' %>
+            <%= f.search_field :name_cont %>
+            </li>
+            <br>
             <li><%= f.label :name_eq, '品目：' %>
             <%= f.collection_select :name_eq, @product_name, :name, :name, include_blank: '選択する' %>
             </li>

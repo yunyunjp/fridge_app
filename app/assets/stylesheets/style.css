@@ -92,7 +92,7 @@ body {
 
 main {
     background: #ffffff;
-    margin-top: 50px;
+    margin-top: 40px;
     flex: 1;
 }
 
@@ -196,12 +196,11 @@ main {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.card__user {
+a.card__user {
   font-size: 12px;
   color: #999;
-  text-align: right;
+  margin-right: 3px;
 }
-
 .card__img {
   margin: 20px;
 }
@@ -217,10 +216,12 @@ main {
   text-decoration: underline;
   font-weight: bold;
   color: #FF5959;
+  margin-bottom: 7px;
 }
 
 .nickname-content {
   text-align: right;
+  margin-bottom: 7px;
 }
 
 /* プロダクト検索フォーム */
@@ -235,9 +236,8 @@ main {
 
 .cp_point li {
 	position: relative;
-	list-style-type: disc;
+	list-style-type: none;
 }
-
 
 
 /* 詳細ページ */

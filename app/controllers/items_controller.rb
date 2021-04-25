@@ -2,9 +2,14 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_item, only: [:show, :edit, :update, :destroy]
   before_action :move_to_index, only: [:edit, :update, :destroy]
-
+  before_action :search_item, only: [:index, :search]
+  
   def index
     @items = Item.includes(:user).order("created_at DESC")
+  end
+  
+  def search
+    @results = @p.result.where(user_id: current_user.id) 
   end
 
   def new
@@ -43,6 +48,11 @@ class ItemsController < ApplicationController
   end
 
   private
+
+  def search_item
+    @p = Item.ransack(params[:q])
+  end
+
   def item_params
     params.require(:item).permit(:name, :quantity, :purchase_date, :expiration_date, :memo, :image).merge(user_id: current_user.id)
   end

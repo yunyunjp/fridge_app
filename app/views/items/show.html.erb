@@ -54,6 +54,9 @@
           </p>
         </div>
         <% end %>
+          <div class="nickname-content">
+            <%= link_to "by #{@item.user.nickname}", root_path, class: :card__user %>
+          </div>
         </div>
         </div>
       </div>
