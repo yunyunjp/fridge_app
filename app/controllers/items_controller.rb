@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show, :search]
+  before_action :authenticate_user!, except: [:index, :show, :search, :indicate]
   before_action :set_item, only: [:show, :edit, :update, :destroy]
   before_action :move_to_index, only: [:edit, :update, :destroy]
   
@@ -10,6 +10,14 @@ class ItemsController < ApplicationController
   def search
     @items = Item.search(params[:keyword])
   end
+
+  def indicate
+    @items = Item.where(user_id: current_user.id).includes(:user).order("created_at DESC")
+  end
+
+  def seek
+    @items = current_user.items.seek(params[:keyword])
+  end  
 
   def new
     @item = Item.new

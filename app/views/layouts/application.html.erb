@@ -20,9 +20,10 @@
           </button>
           <ul class="nav__wrapper">
             <% unless user_signed_in? %>
-            <li class="nav__item"></i><a href="/users/sign_up">新規登録</a></li>
+            <li class="nav__item"><a href="/users/sign_up">新規登録</a></li>
             <% else %>
             <li class="nav__item"><a href="/">ホーム</a></li>
+            <li class="nav__item"><a href="/items/indicate">マイページ</a></li>
             <li class="nav__item"><a href="/products/index">賞味期限一覧</a></li>
             <li class="nav__item"><a href="/users/sign_out" data-method="delete">ログアウト</a></li>
             <% end %>

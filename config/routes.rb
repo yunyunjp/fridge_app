@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   resources :items do
     collection do
       get 'search'
+      get 'indicate'
+      get 'seek'
     end
   end  
 end

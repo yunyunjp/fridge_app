@@ -130,7 +130,7 @@ main {
 
 /* ツイッターボタン */
 .tb {
-  margin-top: 28px;
+  margin: 28px 0;
   text-align: center;
 }
 
@@ -177,9 +177,10 @@ main {
 }
 .heading {
   font-size: 28px;
-  margin-bottom: 28px;
-  margin-top: 28px;
+  margin-bottom: 50px;
+  margin-top: 50px;
   font-weight: bold;
+  text-align: center;
 }
 
 .card__wrapper {
@@ -196,13 +197,8 @@ main {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-a.card__user {
-  font-size: 12px;
-  color: #999;
-  margin-right: 3px;
-}
 .card__img {
-  margin: 20px;
+  margin: 22px;
 }
 
 .sub-content {
@@ -222,6 +218,9 @@ a.card__user {
 .nickname-content {
   text-align: right;
   margin-bottom: 7px;
+  font-size: 12px;
+  margin-right: 3px;
+  color: #999;
 }
 
 /* プロダクト検索フォーム */
@@ -259,21 +258,14 @@ a.card__user {
 
 
 
-/* 詳細ページ */
-.prototype__wrapper{
+/* アイテム詳細ページ */
+.item-wrapper{
   min-height: calc(100vh - 161px);
 }
-.item_heading{
-  font-size: 24px;
+.item-heading{
+  font-size: 28px;
   font-weight: bold;
   text-align: center;
-}
-.prototype__user{
-  display: block;
-  font-size: 16px;
-  color: #999;
-  text-align: center;
-  text-decoration: underline;
 }
 
 .item_block {
@@ -286,14 +278,14 @@ a.card__user {
   width:400px;
   margin-top: 30px;
 }
-.prototype__image{
+.image-content{
   width: 40%;
   margin: 0 auto;
   padding: 16px 0;
   display: flex;
   justify-content: center;
 }
-.prototype__detail{
+.item-detail{
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -311,7 +303,7 @@ a.card__user {
   text-decoration: underline;
   color: #FF5959;
 }
-.prototype__manage{
+.item-manage{
   display: flex;
   justify-content: center;
   padding-top: 16px;
@@ -349,11 +341,11 @@ a.card__user {
 	vertical-align: middle;
 	padding: 10px;
 	border: 1px solid #dddddd;
-  font-weight: bold;
 }
 .cp_table td:first-child {
 	text-align: center;
 	vertical-align: middle;
+  font-weight: bold;
 }
 .cp_table td:last-child {
 	text-align: left;
@@ -403,40 +395,44 @@ a.card__user {
 
 /* タブレット対応 */
 @media (max-width: 1024px) {
+  .card__wrapper {
+    display:flex;
+    justify-content: center;
+  }
   .inner {
     width: 90%;
     margin: 0 auto;
   }
-  .page-heading {
+  .heading {
     font-size: 24px;
   }
   .content {
     width: 48%;
-    margin-bottom: 40px;
-  }
-  .prototype_image{
-    width: 60%;
   }
 }
 
  /* スマホ表示 */
 @media (max-width: 599px) {
-  .page-heading {
+   .brand {
+     margin-right:50px;
+   }
+
+  .heading {
     font-size: 20px;
   }
-  .card {
-    width: 100%;
-    margin-bottom: 60px;
+
+  .card__wrapper {
+    display:flex;
+    justify-content: center;
   }
-  .card__title {
-    font-size: 18px;
-  }
-  .card__summary {
-    font-size: 14px;
-  }
-  .prototype_image{
+
+  .content {
     width: 100%;
   }
+  .sub-content {
+    width: 100%
+  }
+
   .table{
     width: 100%;
   }

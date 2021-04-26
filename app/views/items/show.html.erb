@@ -1,63 +1,62 @@
 <main class="main">
   <div class="inner">
-    <div class="prototype__wrapper">
-      <div class="item_heading">
+    <div class="item-wrapper">
+      <div class="item-heading">
         詳細
       </div>
       <% if user_signed_in? && current_user.id == @item.user_id %>
-        <div class="prototype__manage">
+        <div class="item-manage">
           <%= link_to "編集", edit_item_path(@item), class: :item__btn %>
           <%= link_to "削除", item_path(@item), method: :delete, class: :item__btn %>
         </div>
       <% end %>
       <div class="item_block">
-      <div class="item_card">
-      <div class="prototype__image">
-        <%= link_to image_tag(@item.image.variant(resize: '200x200'), class: :card__img ) %>
-      </div>
+        <div class="item_card">
+            <div class="image-content">
+              <%= link_to image_tag(@item.image.variant(resize: '200x200'), class: :card__img ) %>
+            </div>
 
-      <div class="prototype__detail">
-          <p class="daysleft__title">残り<span id='days_left'></span>日</p>
-      </div>
-      
-      <div class="prototype__body">
-        <div class="prototype__detail">
-          <p class="detail__title">名前</p>
-          <p class="detail__message">
-            <%= @item.name %>
-          </p>
-        </div>
-        <div class="prototype__detail">
-          <p class="detail__title">数量</p>
-          <p class="detail__message">
-            <%= @item.quantity %>
-          </p>
-        </div>
-        <div class="prototype__detail">
-          <p class="detail__title">購入日</p>
-          <p id="purchase_date">
-            <%= @item.purchase_date %>
-          </p>
-        </div>
-        <div class="prototype__detail">
-          <p class="detail__title">賞味期限</p>
-          <p id="expiration_date">
-            <%= @item.expiration_date %>
-          </p>
-        </div>
+            <div class="item-detail">
+                <p class="daysleft__title">残り<span id='days_left'></span>日</p>
+            </div>
+            
+            
+            <div class="item-detail">
+              <p class="detail__title">名前</p>
+              <p class="detail__message">
+                <%= @item.name %>
+              </p>
+            </div>
+            <div class="item-detail">
+              <p class="detail__title">数量</p>
+              <p class="detail__message">
+                <%= @item.quantity %>
+              </p>
+            </div>
+            <div class="item-detail">
+              <p class="detail__title">購入日</p>
+              <p id="purchase_date">
+                <%= @item.purchase_date %>
+              </p>
+            </div>
+            <div class="item-detail">
+              <p class="detail__title">賞味期限</p>
+              <p id="expiration_date">
+                <%= @item.expiration_date %>
+              </p>
+            </div>
 
-        <% if @item.memo.present? %>
-        <div class="prototype__detail">
-          <p class="detail__title">メモ</p>
-          <p class="detail__message">
-            <%= @item.memo %>
-          </p>
-        </div>
-        <% end %>
-          <div class="nickname-content">
-            <%= link_to "by #{@item.user.nickname}", root_path, class: :card__user %>
-          </div>
-        </div>
+            <% if @item.memo.present? %>
+            <div class="item-detail">
+              <p class="detail__title">メモ</p>
+              <p class="detail__message">
+                <%= @item.memo %>
+              </p>
+            </div>
+            <% end %>
+            <div class="nickname-content">
+              <%= "by #{@item.user.nickname}" %>
+            </div>
         </div>
       </div>
     </div>
