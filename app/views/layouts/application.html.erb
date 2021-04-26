@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <%= csrf_meta_tag %>
-    <title>fridge</title>
+    <title>FRiDGE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet">
@@ -22,8 +22,8 @@
             <% unless user_signed_in? %>
             <li class="nav__item"><a href="/users/sign_up">新規登録</a></li>
             <% else %>
-            <li class="nav__item"><a href="/">ホーム</a></li>
-            <li class="nav__item"><a href="/items/indicate">マイページ</a></li>
+            <li class="nav__item"><a href="/">トップページ</a></li>
+            <li class="nav__item"><a href="/items/indicate">マイフリッジ</a></li>
             <li class="nav__item"><a href="/products/index">賞味期限一覧</a></li>
             <li class="nav__item"><a href="/users/sign_out" data-method="delete">ログアウト</a></li>
             <% end %>
@@ -77,7 +77,6 @@
       </div>
     </header>
     <!-- Header End -->
-
     <%= javascript_pack_tag 'application' %>
 
      <%= yield %>

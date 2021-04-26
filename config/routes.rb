@@ -12,5 +12,5 @@ Rails.application.routes.draw do
       get 'indicate'
       get 'seek'
     end
-  end  
+  end
 end

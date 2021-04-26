@@ -22,10 +22,8 @@ class Item < ApplicationRecord
   end
 
   def self.seek(seek)
-    if seek != ""
-      Item.where('name LIKE(?)', "%#{seek}%").where(user_id: user_id)
-    else
-      Item.where.(user_id: current_user.id).order("created_at DESC")
-    end
+    if seek !=""
+     where('name LIKE(?)', "%#{seek}%")
+    end   
   end
 end
