@@ -2,7 +2,7 @@
   <div class="inner">
    <%= search_form_for @p, url: products_search_path do |f| %>
           <ul class="cp_point">
-            <li><i class="fas fa-search fa-1x"></i><%= f.label :name, 'キーワード：' %>
+            <li><i class="fas fa-search fa-1x fa-fw"></i><%= f.label :name, 'キーワード：' %>
             <%= f.search_field :name_cont %>
             </li>
             <br>

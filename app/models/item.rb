@@ -12,4 +12,12 @@ class Item < ApplicationRecord
                            less_than_or_equal_to: 100
                            }
   end
+
+  def self.search(search)
+    if search != ""
+      Item.where('name LIKE(?)', "%#{search}%")
+    else
+      Item.all
+    end
+  end
 end

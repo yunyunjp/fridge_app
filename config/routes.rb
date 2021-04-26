@@ -6,5 +6,9 @@ Rails.application.routes.draw do
    registrations: 'users/registrations'
  }
   root to: "items#index"
-  resources :items
+  resources :items do
+    collection do
+      get 'search'
+    end
+  end  
 end

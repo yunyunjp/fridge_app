@@ -239,6 +239,25 @@ a.card__user {
 	list-style-type: none;
 }
 
+/* アイテムindex/search */
+
+.search-box {
+  margin-bottom:40px;
+  text-align: right;
+}
+
+.search-btn {
+  padding: 0.5em 1.0em;
+  font-size: 0.5em;
+  color: #fff;
+  background: #f49c75;
+  border-radius: 5px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+}
+
+
 
 /* 詳細ページ */
 .prototype__wrapper{
@@ -308,37 +327,6 @@ a.card__user {
   font-weight: bold;
 }
 
-/* ユーザーページ */
-.user__wrapper{
-  min-height: calc(100vh - 161px);
-}
-.table{
-  border-collapse: collapse;
-  margin-bottom: 32px;
-  width: 50%;
-}
-.table__col1{
-  text-align: left;
-  font-weight: bold;
-  background: #fafafa;
-  border-collapse: collapse;
-  border: 1px solid #f5f5f5;
-  width: 30%;
-  padding: 8px;
-}
-.table__col2{
-  text-align: left;
-  border: 1px solid #f5f5f5;
-  border-collapse: collapse;
-  width: 70%;
-  padding: 16px 8px;
-}
-.user__card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
 
 /* 賞味期限一覧ページ */
 .cp_table *, .cp_table *:before, .cp_table *:after {
