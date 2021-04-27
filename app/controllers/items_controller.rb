@@ -8,7 +8,9 @@ class ItemsController < ApplicationController
   end
 
   def search
-    @items = Item.search(params[:keyword])
+    selection = params[:keyword]
+    @items = Item.sort(selection)
+    
   end
 
   def indicate

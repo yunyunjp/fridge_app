@@ -1,10 +1,18 @@
 <main class="main">
   <div class="inner">
-  <div class="search-box">
+    <div class=search-box> 
+    <div class="search-right">
     <%= form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |form| %>
     <i class="fas fa-search fa-1x fa-fw" style="color: #808080;"></i><%= form.text_field :keyword, class: "search-input" %>
     <%= form.submit "検索", class: "search-btn" %>
     <% end %>
+  </div>
+  <div class="search-left">
+   <%= form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |form| %>
+   <%= form.select :keyword, [ ['賞味期限の新しい順', 'new'], ['賞味期限の古い順', 'old'],] %><i class="fas fa-sort fa-1x fa-fw" style="color: #808080;"></i>
+   <% form.submit%>
+   <% end %>
+  </div>
   </div>
   <div class="card-wrapper">
     <%= render partial: "item" %>

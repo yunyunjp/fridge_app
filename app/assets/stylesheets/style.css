@@ -188,6 +188,7 @@ main {
     flex-wrap: wrap;
     margin-left: -8px;
     margin-right: -8px;
+    margin-bottom: 30px;
 }
 
 .content {
@@ -241,22 +242,23 @@ main {
 /* アイテムindex/search */
 
 .search-box {
-  margin-bottom:40px;
-  text-align: right;
+  margin-bottom:30px;
+  display:flex;
+  justify-content: space-between;
 }
 
 .search-btn {
-  padding: 0.5em 1.0em;
-  font-size: 0.5em;
-  color: #fff;
-  background: #f49c75;
-  border-radius: 5px;
-  font-weight: bold;
-  outline: none;
-  border: none;
+  display: none;
 }
 
+select {
+-webkit-appearance: none;
+}
 
+.search-input {
+  height: 17px;
+  width: 122px;
+}
 
 /* アイテム詳細ページ */
 .item-wrapper{
