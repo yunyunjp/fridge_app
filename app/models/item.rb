@@ -28,13 +28,4 @@ class Item < ApplicationRecord
       current_user.items.order("created_at DESC")  
     end
   end
-
-  def self.sort(selection)
-    case selection
-    when 'new'
-      return all.order(expiration_date: :DESC)
-    when 'old'
-      return all.order(expiration_date: :ASC)
-    end
-  end
 end
