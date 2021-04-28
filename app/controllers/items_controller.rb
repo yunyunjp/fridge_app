@@ -4,15 +4,27 @@ class ItemsController < ApplicationController
   before_action :move_to_index, only: [:edit, :update, :destroy]
   
   def index
-    @items = Item.includes(:user).order("created_at DESC")
+    if sort_params.present?
+      @items = Item.sort_items(sort_params)
+    else  
+      @items = Item.includes(:user).order("created_at DESC")
+    end
+    
+    @sort_list = Item.sort_list
   end
-
+  
   def search
-    @items = Item.search(params[:keyword])
+      @items = Item.search(params[:keyword])
   end
 
   def indicate
-    @items = Item.where(user_id: current_user.id).includes(:user).order("created_at DESC")
+    if sort_params.present?
+      @items = Item.where(user_id: current_user.id).sort_items(sort_params)
+    else  
+      @items = Item.where(user_id: current_user.id).includes(:user).order("created_at DESC")
+    end
+
+    @sort_list = Item.where(user_id: current_user.id).sort_list
   end
 
   def seek
@@ -69,4 +81,8 @@ class ItemsController < ApplicationController
       redirect_to root_path
     end
   end
+
+  def sort_params
+    params.permit(:sort)
+  end 
 end

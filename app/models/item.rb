@@ -28,4 +28,16 @@ class Item < ApplicationRecord
       current_user.items.order("created_at DESC")  
     end
   end
+
+  scope :sort_items, -> (sort_order) {
+   order(sort_order[:sort])
+  }
+
+  scope :sort_list, -> { 
+    {
+      "並び替え" => "", 
+      "賞味期限の新しい順" => "expiration_date desc",
+      "賞味期限の古い順" => "expiration_date asc", 
+    }
+  }
 end

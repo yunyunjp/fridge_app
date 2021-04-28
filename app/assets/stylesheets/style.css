@@ -167,6 +167,10 @@ main {
 }
 
 /* メイン */
+ *:focus {
+  outline: none;
+}
+
 .heading {
   font-size: 28px;
   margin-bottom: 50px;
@@ -232,19 +236,29 @@ main {
 }
 
 /* アイテムindex/search */
-
-.search-box {
-  margin-bottom:30px;
-  text-align: right;
+.search-block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
 
+.form-inline {
+  -webkit-appearance: none;
+  height: 19px;
+  width: 132px;
+}
 .search-btn {
   display: none;
 }
 
+.search-right {
+  text-align: right;
+  margin-bottom: 30px;
+}
+
 .search-input {
-  height: 17px;
-  width: 122px;
+  height: 19px;
+  width: 132px;
 }
 
 /* アイテム詳細ページ */
