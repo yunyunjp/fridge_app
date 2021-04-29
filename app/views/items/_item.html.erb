@@ -12,7 +12,7 @@
     <div id="expiration-date<%=i %>"><%= item.expiration_date %></div>
   </div>
   <div class="daysleft-content">
-      <span>残り<span id="days-left<%=i %>"></span>日</span>
+      <span id="dead-line<%=i %>">残り<span id="days-left<%=i %>"></span>日</span>
   </div>
   <div class="nickname-content">
       <%= "by #{item.user.nickname}" %>

@@ -16,10 +16,9 @@
               <%= link_to image_tag(@item.image.variant(resize: '200x200'), class: :card__img ) %>
             </div>
 
-            <div class="item-detail">
-                <p class="daysleft__title">残り<span id='days_left'></span>日</p>
+            <div class="daysleft-detail">
+                <span id="dead_line">残り<span id="days_left"></span>日</span>
             </div>
-            
             
             <div class="item-detail">
               <p class="detail__title">名前</p>

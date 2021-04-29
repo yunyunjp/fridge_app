@@ -201,7 +201,7 @@ main {
 .sub-content {
   text-align: center;
   font-weight: bold;
-  margin-bottom: 7px;
+  margin-bottom: 8px;
 }
 
 .daysleft-content {
@@ -209,14 +209,14 @@ main {
   text-decoration: underline;
   font-weight: bold;
   color: #FF5959;
-  margin-bottom: 7px;
+  margin-bottom: 8px;
 }
 
 .nickname-content {
   text-align: right;
   margin-bottom: 7px;
   font-size: 12px;
-  margin-right: 3px;
+  padding-right: 3px;
   color: #999;
 }
 
@@ -295,17 +295,29 @@ main {
   margin-bottom: 8px;
 }
 
-.detail__title{
+.detail__title {
   font-size: 20px;
   font-weight: bold;
 }
 
-.daysleft__title{
+.daysleft-detail {
+  display: flex;
+  color: #FF5959;
+  text-decoration: underline;
   font-size: 20px;
   font-weight: bold;
-  text-decoration: underline;
-  color: #FF5959;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 8px;
+} 
+
+.detail__message,
+#expiration_date,
+#purchase_date {
+   font-weight: bold;
+   font-size: 20px;
 }
+
 .item-manage{
   display: flex;
   justify-content: center;
