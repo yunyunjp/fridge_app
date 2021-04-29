@@ -2,34 +2,34 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show, :search, :indicate, :seek]
   before_action :set_item, only: [:show, :edit, :update, :destroy]
   before_action :move_to_index, only: [:edit, :update, :destroy]
-  
+
   def index
-    if sort_params.present?
-      @items = Item.sort_items(sort_params)
-    else  
-      @items = Item.includes(:user).order("created_at DESC")
-    end
-    
+    @items = if sort_params.present?
+               Item.sort_items(sort_params)
+             else
+               Item.includes(:user).order('created_at DESC')
+             end
+
     @sort_list = Item.sort_list
   end
-  
+
   def search
-      @items = Item.search(params[:keyword])
+    @items = Item.search(params[:keyword])
   end
 
   def indicate
-    if sort_params.present?
-      @items = Item.where(user_id: current_user.id).sort_items(sort_params)
-    else  
-      @items = Item.where(user_id: current_user.id).includes(:user).order("created_at DESC")
-    end
+    @items = if sort_params.present?
+               Item.where(user_id: current_user.id).sort_items(sort_params)
+             else
+               Item.where(user_id: current_user.id).includes(:user).order('created_at DESC')
+             end
 
     @sort_list = Item.where(user_id: current_user.id).sort_list
   end
 
   def seek
     @items = current_user.items.seek(params[:keyword])
-  end  
+  end
 
   def new
     @item = Item.new
@@ -38,9 +38,9 @@ class ItemsController < ApplicationController
   def create
     @item = Item.create(item_params)
     if @item.save
-       redirect_to root_path
+      redirect_to root_path
     else
-       render :new  
+      render :new
     end
   end
 
@@ -69,7 +69,8 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, :quantity, :purchase_date, :expiration_date, :memo, :image).merge(user_id: current_user.id)
+    params.require(:item).permit(:name, :quantity, :purchase_date, :expiration_date, :memo,
+                                 :image).merge(user_id: current_user.id)
   end
 
   def set_item
@@ -77,12 +78,10 @@ class ItemsController < ApplicationController
   end
 
   def move_to_index
-    unless current_user == @item.user
-      redirect_to root_path
-    end
+    redirect_to root_path unless current_user == @item.user
   end
 
   def sort_params
     params.permit(:sort)
-  end 
+  end
 end

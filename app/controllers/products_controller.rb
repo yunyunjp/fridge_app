@@ -20,19 +20,19 @@ class ProductsController < ApplicationController
   end
 
   def set_product_column
-    @product_name = Product.select("name").distinct
-    @product_shelf_life = Product.select("shelf_life").distinct
-    @product_frozen_life = Product.select("frozen_life").distinct
+    @product_name = Product.select('name').distinct
+    @product_shelf_life = Product.select('shelf_life').distinct
+    @product_frozen_life = Product.select('frozen_life').distinct
   end
 
   def set_category_column
-    @category_name = Category.select("name").distinct
+    @category_name = Category.select('name').distinct
   end
 
   def sort_direction
     %w[asc desc].include?(params[:direction]) ? params[:direction] : 'asc'
   end
-   
+
   def sort_column
     Product.column_names.include?(params[:sort]) ? params[:sort] : 'name'
   end
