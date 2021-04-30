@@ -334,6 +334,34 @@ main {
   font-weight: bold;
 }
 
+/* エラーメッセージ */
+.error-block {
+  display: flex;
+  justify-content: center;
+}
+.error-alert {
+  border: 2px solid #FF5959;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  width:307.19px;
+}
+
+.error-message {
+  text-align: center;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 15px;
+    margin: -7px -7px 0;
+    background-color: #FF5959;
+    color: #fff;
+}
+
+#error_explanation {
+  border: 2px solid #FF5959;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  width:307.19px;
+}
 
 /* 賞味期限一覧ページ */
 .cp_table *, .cp_table *:before, .cp_table *:after {
