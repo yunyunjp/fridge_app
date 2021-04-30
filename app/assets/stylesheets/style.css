@@ -33,7 +33,7 @@ html {
 }
 
 body {
-  background  : linear-gradient(135deg, #ffffff, #ffb080, #9999ff); 
+  background: #fff;
   font-family: "M PLUS 1p";
   margin: 0;
     display: flex;
@@ -173,7 +173,7 @@ main {
 
 .heading {
   font-size: 28px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   margin-top: 50px;
   font-weight: bold;
   text-align: center;
@@ -266,6 +266,7 @@ main {
   min-height: calc(100vh - 161px);
 }
 .item-heading{
+  margin-top: 50px;
   font-size: 28px;
   font-weight: bold;
   text-align: center;
