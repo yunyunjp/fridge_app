@@ -33,7 +33,7 @@ html {
 }
 
 body {
-  background: #fff;
+  background: linear-gradient(135deg, #f49c75, #ffffff); 
   font-family: "M PLUS 1p";
   margin: 0;
     display: flex;
@@ -92,7 +92,7 @@ body {
 /* ヘッダー */
 
 main {
-    background: #ffffff;
+    background: #fff;
     flex: 1;
 }
 
