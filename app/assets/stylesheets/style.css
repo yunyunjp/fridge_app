@@ -34,7 +34,6 @@ html {
 
 body {
   background: linear-gradient(135deg, #f49c75, #ffffff); 
-  font-family: "M PLUS 1p";
   margin: 0;
     display: flex;
     flex-flow: column;
@@ -477,5 +476,7 @@ main {
   .sub-content {
     width: 100%
   }
+
+
 }
 
