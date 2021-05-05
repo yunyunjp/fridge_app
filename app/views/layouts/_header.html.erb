@@ -8,9 +8,9 @@
             <% unless user_signed_in? %>
             <li class="nav__item"><a href="/users/sign_up">新規登録</a></li>
             <% else %>
-            <li class="nav__item"><a href="/">トップページ</a></li>
+            <li class="nav__item"><a href="/">ホーム</a></li>
             <li class="nav__item"><a href="/items/indicate">マイフリッジ</a></li>
-            <li class="nav__item"><a href="/products/index">賞味期限一覧</a></li>
+            <li class="nav__item"><a href="/products/index">賞味期限目安一覧</a></li>
             <li class="nav__item"><a href="/users/sign_out" data-method="delete">ログアウト</a></li>
             <% end %>
           </ul>
@@ -35,7 +35,7 @@
           </svg>
           
           
-          <span>ログイン</span>
+          <span id="log_in">ログイン</span>
           
         </a>
         <% else %>
