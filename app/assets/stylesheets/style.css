@@ -240,18 +240,9 @@ main {
 .search-block {
   display: flex;
   justify-content: space-between;
-  margin: 25px 0;
+  margin: 30px 0;
 }
 
-.search-box {
-  vertical-align: bottom;
-  margin: 1%;
-}
-
-.search-select {
-  vertical-align: bottom;
-  margin: 1%;
-}
 
 .form-inline {
   -webkit-appearance: none;
