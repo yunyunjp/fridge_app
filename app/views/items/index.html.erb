@@ -7,7 +7,7 @@
       <% if @sorted.present? %>
         <%= f.select :sort, @sort_list, selected: @sorted, onChange: "javascript: this.form.submit();" %>
       <% else %>
-        <%= f.select :sort, @sort_list, {}, onChange: "javascript: this.form.submit();", class: "form-inline ml-2" %>
+        <%= f.select :sort, @sort_list, {}, onChange: "javascript: this.form.submit();", class: "form-inline" %>
       <% end %>
     <% end %>
     </div>

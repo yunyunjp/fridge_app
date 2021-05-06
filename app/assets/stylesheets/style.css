@@ -243,6 +243,14 @@ main {
   margin: 30px 0;
 }
 
+.search-box {
+  margin: 1%;
+}
+
+.search-select {
+  margin: 1%;
+}
+
 .form-inline {
   -webkit-appearance: none;
   height: 19px;
@@ -255,6 +263,7 @@ main {
 .search-right {
   text-align: right;
   margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .search-input {
