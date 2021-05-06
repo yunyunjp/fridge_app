@@ -14,8 +14,11 @@
   <div class="daysleft-content">
       <span id="dead-line<%=i %>">残り<span id="days-left<%=i %>"></span>日</span>
   </div>
+  <div class="row-reverse">
   <div class="nickname-content">
-      <%= "by #{item.user.nickname}" %>
+      <a href="/users/<%= item.user.id %>">
+      <%= item.user.nickname %>
+  </div>
   </div>
   </div>
 <% end %> 

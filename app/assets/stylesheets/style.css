@@ -220,18 +220,6 @@ main {
   margin-bottom: 8px;
 }
 
-.nickname-content {
-  text-align: right;
-  margin-bottom: 7px;
-  font-size: 12px;
-  padding-right: 3px;
-  color: #999;
-  
-}
-
-.nickname-content a {
-  color: #999;
-}
 
 /* プロダクト検索フォーム */
 .cp_point {
@@ -408,6 +396,30 @@ main {
 .nickname-fridge {
   display: flex;
   justify-content: center;
+}
+
+.row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.nickname-content {
+    width: 50px;
+    text-align: center;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    font-size: 12px;
+    padding-right: 3px;
+    background-color: #F49c75;
+    border-radius: 4px;
+    color: rgba(0, 0, 0, 0.7);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px -2px 0px inset, 
+                rgba(0, 0, 0, 0.4) 0px 1px 1px;
+    padding: 8px;
+}
+
+.nickname-content a {
+  color: #FFF;
 }
 
 /* エラーメッセージ */
