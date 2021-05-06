@@ -239,23 +239,23 @@ main {
 /* アイテムindex/search */
 .search-block {
   display: flex;
-  
   justify-content: space-between;
-  margin: 20px 0;
+  margin: 25px 0;
 }
 
 .search-box {
-  
+  vertical-align: bottom;
   margin: 1%;
 }
 
 .search-select {
+  vertical-align: bottom;
   margin: 1%;
 }
 
 .form-inline {
   -webkit-appearance: none;
-  height: 16px;
+  height: 19px;
   width: 132px;
 }
 .search-btn {
@@ -269,7 +269,7 @@ main {
 }
 
 .search-input {
-  height: 16px;
+  height: 19px;
   width: 132px;
 }
 
