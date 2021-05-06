@@ -21,7 +21,6 @@
             </div>
             
             <div class="item-detail">
-              <p class="detail__title">名前</p>
               <p class="detail__message">
                 <%= @item.name %>
               </p>
@@ -54,6 +53,7 @@
             </div>
             <% end %>
             <div class="nickname-content">
+              <a href="/users/<%= @item.user.id %>">
               <%= "by #{@item.user.nickname}" %>
             </div>
         </div>

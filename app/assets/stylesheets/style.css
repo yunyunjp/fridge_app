@@ -226,6 +226,11 @@ main {
   font-size: 12px;
   padding-right: 3px;
   color: #999;
+  
+}
+
+.nickname-content a {
+  color: #999;
 }
 
 /* プロダクト検索フォーム */
@@ -311,14 +316,22 @@ main {
 
 .daysleft-detail {
   display: flex;
-  color: #FF5959;
-  text-decoration: underline;
   font-size: 20px;
   font-weight: bold;
   align-items: center;
   flex-direction: column;
+  color: #FF5959;
+  text-decoration: underline;
+  text-decoration-color: #FF5959;
   margin-bottom: 8px;
 } 
+
+#days_left,
+#dead_line {
+  color: #FF5959;
+  text-decoration: underline;
+  text-decoration-color: #FF5959;
+}
 
 .detail__message,
 #expiration_date,
@@ -341,6 +354,60 @@ main {
   border-radius: 5px;
   margin: 0 3px;
   font-weight: bold;
+}
+
+/* ユーザーページ */
+.container {
+    font-weight: bold;
+    color: #fff;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: #f49c75;
+    height: 32px;
+    position: relative;
+    margin: 32px 0;
+    width: 300px;
+}
+
+.container__side {
+    bottom: -8px;
+    position: absolute;
+    z-index: -1;
+    border: 16px solid #CCC;
+    border-left-color: transparent;
+}
+
+.container__side--left {
+    left: -24px;
+}
+
+.container__side--right {
+    right: -24px;
+}
+
+.container__triangle {
+    position: absolute;
+    top: 100%;
+
+    border: 8px solid transparent;
+    border-bottom-width: 0;
+    border-top-color: #AAA;
+}
+
+.container__triangle--left {
+    border-right-width: 0;
+    left: 0;
+}
+
+.container__triangle--right {
+    border-left-width: 0;
+    right: 0;
+}
+
+.nickname-fridge {
+  display: flex;
+  justify-content: center;
 }
 
 /* エラーメッセージ */
@@ -444,7 +511,6 @@ main {
   .sub-content {
     width: 100%
   }
-
 
 }
 
