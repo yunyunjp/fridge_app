@@ -227,7 +227,7 @@ main {
 	margin: 40px 0 30px;
 	padding: 25px 20px 15px 40px;
 	border: 1px dotted #1b2538;
-	background-color: #f8fdff;
+	background-color: #F0EDF5;
 	border-radius: 5px;
 }
 
@@ -428,7 +428,7 @@ main {
   justify-content: center;
 }
 .error-alert {
-  border: 2px solid #FF5959;
+  border: 2px solid #9C76F5;
   padding: 7px 7px 0;
   margin-bottom: 20px;
   width:307.19px;
@@ -440,12 +440,12 @@ main {
     padding: 5px 5px 5px 15px;
     font-size: 15px;
     margin: -7px -7px 0;
-    background-color: #FF5959;
+    background-color: #9C76F5;
     color: #fff;
 }
 
 #error_explanation {
-  border: 2px solid #FF5959;
+  border: 2px solid #9C76F5;
   padding: 7px 7px 0;
   margin-bottom: 20px;
   width:307.19px;
