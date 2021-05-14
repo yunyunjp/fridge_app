@@ -1,5 +1,5 @@
 # README
-[![Image from Gyazo](https://i.gyazo.com/875d301a91288e9e9032b1c97d3db35b.png)](https://gyazo.com/875d301a91288e9e9032b1c97d3db35b)
+[![Image from Gyazo](https://i.gyazo.com/4debdbda52dfca5b1116019637bc18ea.png)](https://gyazo.com/4debdbda52dfca5b1116019637bc18ea)
 
 | 項目                 | 内容                                                         |
 | -------------------- | ------------------------------------------------------------ |
