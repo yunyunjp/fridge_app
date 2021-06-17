@@ -57,8 +57,7 @@
                <%= link_to "戻る", root_path %>
               </div>
               <div class="nickname-content">
-                <a href="/users/<%= @item.user.id %>"></a>
-                <%= @item.user.nickname %>
+                <a href="/users/<%= @item.user.id %>"><%= @item.user.nickname %></a>
               </div>
             </div>
         </div>
