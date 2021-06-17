@@ -403,28 +403,41 @@ main {
   justify-content: center;
 }
 
-.row-reverse {
+.btn-contents {
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 0 4%;
+}
+
+.btn-content {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.back-btn {
+  font-weight: bold;
+  text-align: center;
+  font-size: 14px;
+  background-color: #F49c75;
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0.7);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px -2px 0px inset, 
+              rgba(0, 0, 0, 0.4) 0px 1px 1px;
+  padding: 8px;
 }
 
 .nickname-content {
-    width: 50px;
+    color: #fff;
+    font-weight: bold;
     text-align: center;
-    margin-bottom: 8px;
-    margin-right: 8px;
-    font-size: 12px;
-    padding-right: 3px;
+    font-size: 14px;
     background-color: #F49c75;
     border-radius: 4px;
-    color: rgba(0, 0, 0, 0.7);
     box-shadow: rgba(0, 0, 0, 0.3) 0px -2px 0px inset, 
                 rgba(0, 0, 0, 0.4) 0px 1px 1px;
     padding: 8px;
-}
-
-.nickname-content a {
-  color: #FFF;
 }
 
 /* エラーメッセージ */

@@ -52,11 +52,14 @@
               </p>
             </div>
             <% end %>
-            <div class="row-reverse">
-            <div class="nickname-content">
-              <a href="/users/<%= @item.user.id %>">
-              <%= @item.user.nickname %>
-            </div>
+            <div class="btn-contents">
+              <div class="back-btn">
+               <%= link_to "戻る", root_path %>
+              </div>
+              <div class="nickname-content">
+                <a href="/users/<%= @item.user.id %>"></a>
+                <%= @item.user.nickname %>
+              </div>
             </div>
         </div>
       </div>
