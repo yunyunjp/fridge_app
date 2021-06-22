@@ -1,5 +1,7 @@
-sudo: required
-
+language: ruby
+os: linux
+dist: xenial
+sudo: true
 services: docker
 
 before_install:
