@@ -302,9 +302,22 @@ main {
   margin-bottom: 8px;
 }
 
+
 .detail__title {
-  font-size: 20px;
-  font-weight: bold;
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  font-weight: normal;
+  border-radius: 20px;
+  font-size: 1rem;
+  line-height: 20px;
+  padding: 0 5px;
+  margin: 8px 0;
+}
+
+.memo__message {
+  width: 180px;
+  margin-bottom: 20px;
 }
 
 .daysleft-detail {
@@ -437,6 +450,7 @@ main {
     text-align: center;
     background-color: #F49c75;
     border-radius: 4px;
+    margin: 5px 0;
     padding: 8px
 }
 .nickname-contents {
