@@ -1,0 +1,47 @@
+version: 2.1
+orbs:
+  ruby: circleci/ruby@1.1.2 
+
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.6.5-stretch-node
+    working_directory: ~/fridge_app/
+    
+    steps:
+      - checkout:
+          path: ~/fridge_app
+      - ruby/install-des
+  
+  test:
+    docker:
+      - image: circleci/ruby:2.6.5
+      - image: circleci/mysql:5.6
+        environment:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: root
+          BUNDLER_VERSION: 2.1.4
+    environment:
+      BUNDLE_JOBS: "3"
+      BUNDLE_RETRY: "3"
+      APP_DATABASE_HOST: "127.0.0.1"
+      RAILS_ENV: test
+    working_directory: ~/fridge_app
+    steps:
+      - checkout:
+          path: ~/fridge_app
+      - ruby/install-des
+      - run:
+          name: Database setup
+          comand: bundle exec rails db:migrate
+      - run:
+          name: test
+          command: build exec rails test
+
+workflows:
+   version: 2
+   build_and_test:
+     jobs:
+       - build
+       - test:
+           requires:
