@@ -73,7 +73,7 @@ https://user-images.githubusercontent.com/78527774/117278496-ca2c5900-ae9b-11eb-
 - 詳細画面表示、アイテムの編集、削除ができる
 ***
 #### ユーザーフリッジ画面へ遷移
-![ユーザーフリッジ画面](https://user-images.githubusercontent.com/78527774/117280889-09f44000-ae9e-11eb-95bf-5298d81958dd.png)
+![ユーザーフリッジ画面](https://user-images.githubusercontent.com/78527774/123100089-c06fac80-d46d-11eb-946d-26d1524b1e3f.png)
 - 右下のニックネームのボタンから各ユーザーページに遷移できる
 ***
 #### メニューボタンからできること
@@ -84,7 +84,7 @@ https://user-images.githubusercontent.com/78527774/117279590-d238c880-ae9c-11eb-
 - ログアウト
 ***
 #### マイフリッジ画面
-![マイフリッジ画面](https://user-images.githubusercontent.com/78527774/117281489-ab7b9180-ae9e-11eb-8dd7-ad286609a1cd.png)
+![マイフリッジ画面](https://user-images.githubusercontent.com/78527774/123100034-b5b51780-d46d-11eb-8502-2423a755dfc1.png)
 - マイフリッジをTwitter上でシェアできる
 ***
 #### 賞味期限目安一覧画面
