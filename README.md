@@ -60,7 +60,7 @@
 - 名前、数量、購入日、賞味期限、メモ(任意)、画像を登録できる
 ***
 #### ホーム画面(トップページ)
-![トップページ](https://user-images.githubusercontent.com/78527774/117277814-2642ad80-ae9b-11eb-95a8-f5c8c4d2388f.png)
+![トップページ](https://user-images.githubusercontent.com/78527774/123099231-f6f8f780-d46c-11eb-8a71-53efaaa9a63c.png)
 - 利用者の全アイテム表示、名称、賞味期限、残り日数の確認(賞味期限切れのアイテムは赤色から紫色に表示が変わる)
 ***
 #### 並び替え機能、検索機能
@@ -69,7 +69,7 @@ https://user-images.githubusercontent.com/78527774/117278496-ca2c5900-ae9b-11eb-
 - アイテムの名前で検索することができる
 ***
 #### 詳細表示・編集・削除
-![詳細画面](https://user-images.githubusercontent.com/78527774/117280949-18daf280-ae9e-11eb-914d-d37971ca357f.png)
+![詳細画面](https://user-images.githubusercontent.com/78527774/123099156-e183cd80-d46c-11eb-97ab-9b3e56c287ae.png)
 - 詳細画面表示、アイテムの編集、削除ができる
 ***
 #### ユーザーフリッジ画面へ遷移
