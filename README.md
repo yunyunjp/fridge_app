@@ -21,13 +21,13 @@
 -  Ruby 2.6.5, Ruby on Rails 6.0.0
 
 テスト
-- RSpec
+- RSpec, Rubocop
 
 データベース
 - MySQL/Sequel Pro
 
 インフラ
-- Heroku, AWS S3
+- Heroku, AWS S3, Docker/Docker-compose
 
 ソース管理
 - GitHub
