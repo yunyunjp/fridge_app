@@ -1,57 +1,47 @@
-version: 2
+version: 2.1
+orbs:
+  ruby: circleci/ruby@1.1.2
+
 jobs:
   build:
-    machine:
-      image: circleci/classic:edge
+    docker:
+      - image: circleci/ruby:2.6.5
     working_directory: ~/fridge_app
     steps:
-      - checkout
-      - run:
-          name: Install Docker Compose
-          command: |
-            curl -L https://github.com/docker/compose/releases/download/1.29.2/docker-compose-`uname -s`-`uname -m` > ~/docker-compose
-            chmod +x ~/docker-compose
-            sudo mv ~/docker-compose /usr/local/bin/docker-compose
-      - run:
-          name: docker-compose up
-          command: |
-            set -x
-            docker-compose up --build -d
-      - run:
-          name: docker-compose stop
-          command: |
-            set -x
-            docker-compose stop
-      - run:
-          name: docker-compose run --rm web yarn install --cache-files
-          command: |
-            set -x
-            docker-compose run --rm web yarn install --cache-files
-      - run:
-          name: docker-compose run --rm web rails webpacker:compile
-          command: |
-            set -x
-            docker-compose run --rm web rails webpacker:compile
-      - run:
-          name: docker-compose up
-          command: |
-            set -x
-            docker-compose up -d
-      - run:
-          name: docker-compose run web bundle exec rails db:create
-          command: |
-            set -x
-            docker-compose run web bundle exec rails db:create
-      - run:
-          name: docker-compose run web bundle exec rails db:migrate
-          command: |
-            set -x
-            docker-compose run web bundle exec rails db:migrate
-      - run:
-          name: docker-compose run web bundle exec rspec
-          command: |
-            set -x
-            docker-compose run web bundle exec rspec
-      - run:
-          name: docker-compose down
-          command: docker-compose down
+      - checkout:
+          path: ~/fridge_app
+      - ruby/install-deps
+
+  test:
+      docker:
+        - image: circleci/ruby:2.6.5
+        - image: circleci/mysql:5.6
+          environment:
+            MYSQL_ROOT_PASSWORD: password
+            MYSQL_DATABASE: fridge_app_test
+            MYSQL_USER: root
+      environment:
+        BUNDLE_JOBS: "3"
+        BUNDLE_RETRY: "3"
+        APP_DATABASE_HOST: "127.0.0.1"
+        RAILS_ENV: test
+      working_directory: ~/fridge_app
+      steps:
+        - checkout:
+            path: ~/fridge_app
+        - ruby/install-deps
+        - run:
+            name: Database setup
+            comand: bundle exec rails db:migrate
+        - run:
+            name: test
+            command: build exec rspec
+
+  workflows:
+    version: 2
+    build_and_test:
+      jobs:
+        - build
+        - test:
+            requires:
+              - build
