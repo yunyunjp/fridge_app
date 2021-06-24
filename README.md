@@ -94,8 +94,7 @@ https://user-images.githubusercontent.com/78527774/117281248-6b1c1380-ae9e-11eb-
 - テーブルについて品目、期間ごとに昇順、降順の並び替え可能
 ***
 #### レスポンシブデザイン対応
-https://user-images.githubusercontent.com/78527774/117281714-e7aef200-ae9e-11eb-805a-9441d94fe89b.mp4
-https://user-images.githubusercontent.com/78527774/117281730-eb427900-ae9e-11eb-8276-8fce1407d367.mp4
+https://user-images.githubusercontent.com/78527774/123211265-2ad02d80-d4fe-11eb-83f8-7644081c8f6a.mp4
 
 # データベース設計
 ![ER](https://user-images.githubusercontent.com/78527774/117104660-82cc9c80-adb7-11eb-8bad-88ebee1de9c4.png)
