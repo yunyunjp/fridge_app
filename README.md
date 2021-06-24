@@ -27,10 +27,10 @@
 - MySQL/Sequel Pro
 
 インフラ
-- Heroku, AWS S3, Docker/Docker-compose
+- Heroku, AWS S3, Docker/Docker-compose, CircleCI
 
 ソース管理
-- GitHub
+- Git/GitHub
 
 エディタ
 - VScode
@@ -64,7 +64,7 @@
 - 利用者の全アイテム表示、名称、賞味期限、残り日数の確認(賞味期限切れのアイテムは赤色から紫色に表示が変わる)
 ***
 #### 並び替え機能、検索機能
-https://user-images.githubusercontent.com/78527774/117278496-ca2c5900-ae9b-11eb-9168-93d301b4b1ab.mp4
+https://user-images.githubusercontent.com/78527774/123210523-10e21b00-d4fd-11eb-8b74-514bcdebac53.mp4
 - 賞味期限の新しい順、古い順に並び替えすることができる
 - アイテムの名前で検索することができる
 ***
@@ -77,7 +77,7 @@ https://user-images.githubusercontent.com/78527774/117278496-ca2c5900-ae9b-11eb-
 - 右下のニックネームのボタンから各ユーザーページに遷移できる
 ***
 #### メニューボタンからできること
-https://user-images.githubusercontent.com/78527774/117279590-d238c880-ae9c-11eb-8f9b-ffdf394c928a.mp4
+https://user-images.githubusercontent.com/78527774/123210476-032c9580-d4fd-11eb-804a-6200896b8343.mp4
 - ホーム画面遷移
 - マイフリッジ画面遷移
 - 賞味期限目安一覧画面遷移
