@@ -1,15 +1,57 @@
-version: 2.1
-orbs:
-  ruby: circleci/ruby@0.1.2 
-
+version: 2
 jobs:
   build:
-    docker:
-      - image: circleci/ruby:2.6.5-stretch-node
-    executor: ruby/default
+    machine:
+      image: circleci/classic:edge
+    working_directory: ~/fridge_app
     steps:
       - checkout
       - run:
-          name: Which bundler?
-          command: gem install bundler -v 2.1.4
-      - ruby/bundle-install
+          name: Install Docker Compose
+          command: |
+            curl -L https://github.com/docker/compose/releases/download/1.29.2/docker-compose-`uname -s`-`uname -m` > ~/docker-compose
+            chmod +x ~/docker-compose
+            sudo mv ~/docker-compose /usr/local/bin/docker-compose
+      - run:
+          name: docker-compose up
+          command: |
+            set -x
+            docker-compose up --build -d
+      - run:
+          name: docker-compose stop
+          command: |
+            set -x
+            docker-compose stop
+      - run:
+          name: docker-compose run --rm web yarn install --cache-files
+          command: |
+            set -x
+            docker-compose run --rm web yarn install --cache-files
+      - run:
+          name: docker-compose run --rm web rails webpacker:compile
+          command: |
+            set -x
+            docker-compose run --rm web rails webpacker:compile
+      - run:
+          name: docker-compose up
+          command: |
+            set -x
+            docker-compose up -d
+      - run:
+          name: docker-compose run web bundle exec rails db:create
+          command: |
+            set -x
+            docker-compose run web bundle exec rails db:create
+      - run:
+          name: docker-compose run web bundle exec rails db:migrate
+          command: |
+            set -x
+            docker-compose run web bundle exec rails db:migrate
+      - run:
+          name: docker-compose run web bundle exec rspec
+          command: |
+            set -x
+            docker-compose run web bundle exec rspec
+      - run:
+          name: docker-compose down
+          command: docker-compose down
