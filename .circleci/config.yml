@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   ruby: circleci/ruby@1.1.2
 
-obs:
+jobs:
   build:
     docker:
       - image: circleci/ruby:2.6.5
