@@ -32,9 +32,7 @@ jobs:
         - run:
             name: Database setup
             command: bundle exec rails db:migrate
-        - run:
-            name: install dependencies
-            command: yarn install --check-files
+        - run: yarn install
         - run:
             name: test
             command: bundle exec rspec
