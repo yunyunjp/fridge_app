@@ -11,10 +11,13 @@ jobs:
       - checkout:
           path: ~/fridge_app
       - ruby/install-deps
+      - run:
+            name: yarn Install
+            command: yarn install
 
   test:
       docker:
-        - image: circleci/ruby:2.6.5
+        - image: circleci/ruby:2.6.5-node
         - image: circleci/mysql:5.5
           environment:
             MYSQL_ROOT_PASSWORD: password
