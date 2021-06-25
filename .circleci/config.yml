@@ -43,27 +43,25 @@ jobs:
             name: test
             command: bundle exec rspec
   deploy:
-    docker:
-      - image: circleci/ruby:2.6.5-nodo
-    steps:
-      - checkout
-      - setup_remote_docker:
-          version: 20.10.7
-      - heroku/install
-      - run:
-          name: heroku login
-          command: heroku container:login
-      - run:
-          name: push docker image
-          command: heroku container:push web -a fridge-app-35190
-      - run:
-          name: release docker image
-          command: heroku container:release web -a fridge-app-35190
-      - run:
-          name: datebase setup
-          command: heroku run bundle exec rails db:migrate
-
-            
+        docker:
+          - image: circleci/ruby:2.6.5-nodo
+        steps:
+          - checkout
+          - setup_remote_docker:
+              version: 20.10.7
+          - heroku/install
+          - run:
+              name: heroku login
+              command: heroku container:login
+          - run:
+              name: push docker image
+              command: heroku container:push web -a fridge-app-35190
+          - run:
+              name: release docker image
+              command: heroku container:release web -a fridge-app-35190
+          - run:
+              name: datebase setup
+              command: heroku run bundle exec rails db:migrate
 
 workflows:
   version: 2
