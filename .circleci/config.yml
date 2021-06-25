@@ -15,6 +15,9 @@ jobs:
       - run:
             name: yarn Install
             command: yarn install
+      - run:
+            name: webpacker compile
+            command: bundle exec rails webpacker:compile
 
   test:
       docker:
@@ -36,6 +39,9 @@ jobs:
         - run:
             name: yarn Install
             command: yarn install
+        - run:
+            name: webpacker compile
+            command: bundle exec rails webpacker:compile
         - run:
             name: Database setup
             command: bundle exec rails db:migrate

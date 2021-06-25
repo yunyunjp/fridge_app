@@ -16,7 +16,7 @@ RUN gem update --system \
 COPY . /fridge_app
 
 RUN yarn install --check-files
-RUN bundle exec rails webpacker:install
+RUN bundle exec rails webpacker:compile
 
 ENV PATH $PATH:/usr/local/src/bin
 
