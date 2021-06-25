@@ -5,13 +5,12 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.6.5
+      - image: circleci/ruby:2.6.5-node
     working_directory: ~/fridge_app
     steps:
       - checkout:
           path: ~/fridge_app
       - ruby/install-deps
-      - run: webpacker:install
 
   test:
       docker:
@@ -30,9 +29,6 @@ jobs:
         - checkout:
             path: ~/fridge_app
         - ruby/install-deps
-        - run:
-            name: webpacker:install
-            comand: webpacker:install
         - run:
             name: Database setup
             command: bundle exec rails db:migrate
