@@ -44,7 +44,7 @@ jobs:
             command: bundle exec rspec
   deploy:
         docker:
-          - image: circleci/ruby:2.6.5-nodo
+          - image: circleci/ruby:2.6.5-node
         steps:
           - checkout
           - setup_remote_docker:
