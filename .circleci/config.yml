@@ -11,6 +11,9 @@ jobs:
       - checkout:
           path: ~/fridge_app
       - ruby/install-deps
+          bundler-version: 2.1.4
+      - node/install-packages: 
+          pkg-manager: yarn
 
   test:
       docker:
@@ -29,10 +32,12 @@ jobs:
         - checkout:
             path: ~/fridge_app
         - ruby/install-deps
+            bundler-version: 2.1.4
+        - node/install-packages: 
+            pkg-manager: yarn
         - run:
             name: Database setup
             command: bundle exec rails db:migrate
-        - run: yarn install
         - run:
             name: test
             command: bundle exec rspec
