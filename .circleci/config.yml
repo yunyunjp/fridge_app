@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
   ruby: circleci/ruby@1.1.2
+  node: circleci/node@4.5.1
 
 jobs:
   build:
@@ -10,7 +11,7 @@ jobs:
     steps:
       - checkout:
           path: ~/fridge_app
-      - ruby/install-deps
+      - ruby/install-deps:
           bundler-version: 2.1.4
       - node/install-packages: 
           pkg-manager: yarn
