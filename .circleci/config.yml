@@ -62,7 +62,6 @@ jobs:
           - run:
               name: datebase setup
               command: heroku run bundle exec rails db:migrate
-              RAILS_ENV=production -a $HEROKU_APP_NAME
 
 workflows:
   version: 2
