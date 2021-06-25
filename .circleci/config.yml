@@ -11,8 +11,7 @@ jobs:
     steps:
       - checkout:
           path: ~/fridge_app
-      - ruby/install-deps:
-          bundler-version: 2.1.4
+      - ruby/install-deps
       - node/install-packages: 
           pkg-manager: yarn
 
@@ -33,7 +32,6 @@ jobs:
         - checkout:
             path: ~/fridge_app
         - ruby/install-deps
-            bundler-version: 2.1.4
         - node/install-packages: 
             pkg-manager: yarn
         - run:
